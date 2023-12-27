@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+.main {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .image-container {
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.main .image-container .image {
+  width: 100%;
+  display: flex;
+  align-items: flex-end; /* Ajustează alinierea la partea de jos */
+  justify-content: flex-start; /* Ajustează alinierea la stânga */
+}
+
+.main .image-container .image img {
+  width: 250px;
+  align-items: center;
+}
+
+
+.title h1 {
+  color: #00bcd4;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.title p {
+  color: #324042;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.main .input .talk {
+  background: #324042;
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.main .input .talk:hover {
+  background: #00c3ff;
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: .5s;
+}
+
+.main .input .talk i {
+  font-size: 20px;
+  color: white;
+}
+
+
+.main .input .content {
+  color: #aed0d0;
+  font-size: 15px;
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+  top: 45%;
+  transform: translateY(-50%);
+  margin-right: 25px;
+  background: #324042;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+.datetime {
+  height: 200px;
+  width: 200px;
+  background: transparent;
+  border: 5px #00c3ff solid;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-start; /* Align to the start (left) */
+  align-items: flex-start; /* Align to the start (top) */
+  position: absolute; /* Use absolute positioning */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  margin: 25px;
+}
+
+.odatetime {
+  height: 175px;
+  width: 175px;
+  background: transparent;
+  border: 5px #00c3ff solid;
+  border-radius: 100px;
+  margin: auto; /* Adaugă această linie pentru a centra elementul */
+  color: #00c3ff;
+  text-align:center;
+} 
+.day, .month{
+  position: relative;
+  top: 50px;
+}
+.main .input .assistant-response {
+  position: absolute;
+  right: 0;
+  top: 55%; /* Ajustează la nevoie */
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.main .input .assistant-response .response-text {
+  color: #aed0d0;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-right: 25px;
+  background: #324042;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .datetime {
+    top: 10px;
+    left: 50%;
+    margin-left: -75px; /* Ajustează dimensiunea containerului datetime */
+    height: 150px; /* Ajustează înălțimea containerului datetime */
+    width: 150px; /* Ajustează lățimea containerului datetime */
+  }
+
+  .odatetime {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .odatetime h1, .odatetime h2 {
+    font-size: 15px; /* Ajustează dimensiunea textului la dimensiunea dorită */
+    margin: 0; /* Elimină marginile implicite ale h1 și h2 */
+  }
+
+  .day, .month {
+    top: 0px;
+  }
+
+  .main .input .content,
+  .main .input .assistant-response {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: translateY(0);
+    margin: 15px 0;
+  }
+  .main .input .talk {
+    position: absolute;
+    bottom: 20px; /* Ajustează distanța de la partea de jos a ecranului */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
